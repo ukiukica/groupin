@@ -1,0 +1,22 @@
+#nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+
+#nav-left {
+}
+
+#nav-right {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+
+#nav-home-link {
+    text-decoration: none;
+}
+
+.nav-right-links {
+    text-decoration: none;
+}
