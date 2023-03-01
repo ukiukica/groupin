@@ -3,7 +3,7 @@ FROM python:3.9
 # Set the following enviroment variables
 #
 # REACT_APP_BASE_URL -> Your deployment URL
-# ENV REACT_APP_BASE_URL=https://fokus-app.herokuapp.com/ UNCOMMENT THIS!!!!!
+ENV REACT_APP_BASE_URL=https://groupin.onrender.com
 # FLASK_APP -> entry point to your flask app
 ENV FLASK_APP=app
 # FLASK_ENV -> Tell flask to use the production server
