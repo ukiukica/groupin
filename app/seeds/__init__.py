@@ -1,6 +1,7 @@
 from flask.cli import AppGroup
-from .users import seed_users, undo_users
-from .groups import seed_groups, undo_groups
+# from .users import seed_users, undo_users
+# from .groups import seed_groups, undo_groups
+from .users_and_groups import seed_users_and_groups, undo_users_and_groups
 from app.models.db import db, environment, SCHEMA
 
 # Creates a seed group to hold our commands
@@ -17,14 +18,16 @@ def seed():
         db.session.execute(f"TRUNCATE table {SCHEMA}.groups RESTART IDENTITY CASCADE;")
         # Add a truncate command here for every table that will be seeded.
         db.session.commit()
-    seed_users()
-    seed_groups()
+    # seed_users()
+    # seed_groups()
+    seed_users_and_groups()
     # Add other seed functions here
 
 
 # Creates the `flask seed undo` command
 @seed_commands.command('undo')
 def undo():
-    undo_users()
-    undo_groups()
+    # undo_users()
+    # undo_groups()
+    undo_users_and_groups()
     # Add other undo functions here

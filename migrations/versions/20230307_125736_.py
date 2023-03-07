@@ -1,20 +1,16 @@
 """empty message
 
-Revision ID: 988a4e0bcfd1
+Revision ID: e23550a7d398
 Revises: 
-Create Date: 2023-03-01 11:21:11.810419
+Create Date: 2023-03-07 12:57:36.492805
 
 """
 from alembic import op
 import sqlalchemy as sa
 
-import os
-environment = os.getenv("FLASK_ENV")
-SCHEMA = os.environ.get("SCHEMA")
-
 
 # revision identifiers, used by Alembic.
-revision = '988a4e0bcfd1'
+revision = 'e23550a7d398'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -44,18 +40,12 @@ def upgrade():
     sa.UniqueConstraint('username')
     )
     op.create_table('pinned',
-    sa.Column('group_id', sa.Integer(), nullable=False),
-    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('group_id', sa.Integer(), nullable=True),
+    sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['group_id'], ['groups.id'], ),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
-    sa.PrimaryKeyConstraint('group_id', 'user_id')
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], )
     )
     # ### end Alembic commands ###
-    
-    if environment == "production":
-        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
-        op.execute(f"ALTER TABLE groups SET SCHEMA {SCHEMA};")
-        #  add an ALTER TABLE command here for each table created in the file
 
 
 def downgrade():

@@ -4,9 +4,11 @@ from flask_login import UserMixin
 
 pinned = db.Table(
     'pinned',
-    db.Column('group_id', db.Integer, db.ForeignKey(f'{SCHEMA}.groups.id'), primary_key=True),
-    db.Column('user_id', db.Integer, db.ForeignKey(f'{SCHEMA}.users.id'), primary_key=True)
+    db.Column('group_id', db.Integer, db.ForeignKey(add_prefix_for_prod('groups.id'))),
+    db.Column('user_id', db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')))
 )
+
+
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
     if environment == "production":
