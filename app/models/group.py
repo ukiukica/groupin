@@ -1,5 +1,6 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
 
+
 class Group(db.Model):
     __tablename__ = 'groups'
     if environment == "production":
