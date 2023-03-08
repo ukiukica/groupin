@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import GroupList from "../GroupList";
 import GroupDetails from "../GroupDetails";
 import './Dashboard.css'
 
 function Dashboard () {
 
     const userName = useSelector((state) => state.session.user.username);
-    console.log(userName)
+    
 
     return (
         <>
@@ -16,7 +17,9 @@ function Dashboard () {
                 <button>Suggested Groups</button>
                 <button>Browse All</button>
                 <div>Search...</div>
+                <GroupList />
             </div>
+
             <GroupDetails />
 
         </>
