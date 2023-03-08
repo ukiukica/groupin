@@ -5,6 +5,7 @@ const Splash = () => {
     return (
         <>
             <h1>Splash Page</h1>
+            
         </>
     )
 }
