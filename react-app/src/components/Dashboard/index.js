@@ -10,6 +10,14 @@ function Dashboard () {
     return (
         <>
             <h1>Hello, {userName}!</h1>
+            <div>
+                <button>Pinned Groups</button>
+                <button>Suggested Groups</button>
+                <button>Browse All</button>
+                <div>Search...</div>
+            </div>
+            <div>Group Details</div>
+
         </>
     )
 }
