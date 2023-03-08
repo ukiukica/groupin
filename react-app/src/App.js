@@ -9,6 +9,7 @@ import UsersList from './components/UsersList/index';
 import User from './components/User/index';
 import Splash from './components/Splash'
 import { authenticate } from './store/session';
+import Dashboard from './components/Dashboard';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -38,6 +39,9 @@ function App() {
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
         </Route>
+        <ProtectedRoute path='/dashboard' exact={true}>
+          <Dashboard />
+        </ProtectedRoute>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
