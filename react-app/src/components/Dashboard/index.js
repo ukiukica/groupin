@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import GroupDetails from "../GroupDetails";
 import './Dashboard.css'
 
 function Dashboard () {
@@ -16,7 +17,7 @@ function Dashboard () {
                 <button>Browse All</button>
                 <div>Search...</div>
             </div>
-            <div>Group Details</div>
+            <GroupDetails />
 
         </>
     )
