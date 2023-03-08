@@ -17,5 +17,6 @@ class Group(db.Model):
             'id': self.id,
             'name': self.name,
             'details': self.details,
-            'link': self.link
+            'link': self.link,
+            'img': self.img,
         }
