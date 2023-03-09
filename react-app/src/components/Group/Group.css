@@ -1,16 +1,31 @@
-.list-img {
+#group-container {
+    display: flex;
+    align-items: center;
+}
+
+.group-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
 }
 
-.list-img-div {
-    z-index: 0;
+.group-img-div {
+    /* z-index: 0; */
     /* position: absolute; */
-    width: 300px;
+    width: 475px;
     height: 200px;
     transition: opacity 0.1s;
     /* transition: visibility 0.2s; */
     /* background-color: rgb(180, 180, 180); */
+}
+
+.group-name-div {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.group-name {
+    font-size: 20px;
 }
