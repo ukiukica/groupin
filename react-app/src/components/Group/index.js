@@ -7,10 +7,13 @@ console.log('group', group)
   return (
     <>
       <p>{group.name}</p>
-      <img
-        src={group.img}
-        alt="img"
-      />
+      <div className="list-img-div">
+        <img
+          className="list-img"
+          src={group.img}
+          alt="img"
+        />
+      </div>
     </>
   )
 };
