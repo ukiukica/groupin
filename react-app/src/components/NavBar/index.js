@@ -49,14 +49,14 @@ const NavBar = () => {
           >
             Sign Up
           </NavLink>
-          <NavLink
+          {/* <NavLink
           to="/users"
           exact={true}
           activeClassName="active"
           className="nav-right-links"
         >
           Users
-        </NavLink>
+        </NavLink> */}
           <LogoutButton />
         </div>
       </div>
