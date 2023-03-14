@@ -6,7 +6,7 @@ import "./Dashboard.css";
 
 function Dashboard() {
   const userName = useSelector((state) => state.session.user.username);
-  console.log("userName", userName)
+
   return (
     <div id="dashboard-container">
       <div id="dashboard">
