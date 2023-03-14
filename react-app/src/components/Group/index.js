@@ -8,15 +8,15 @@ const Group = ({ group }) => {
 
   return (
     <>
-    <div 
+    <div
       id="group-container"
       onClick={() => showDetails ? setShowDetails(false) : setShowDetails(true)}
       >
       <div className="group-img-div">
-        <img className="group-img" src={group.img} alt="img" />
+        <img className="group-img" src={group?.img} alt="img" />
       </div>
       <div className="group-name-div">
-      <p className="group-name">{group.name}</p>
+      <p className="group-name">{group?.name}</p>
       </div>
     </div>
     {showDetails ? <GroupDetails group={group}/> : null}
