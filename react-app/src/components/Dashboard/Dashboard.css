@@ -1,0 +1,23 @@
+#dashboard-container {
+    display: flex;
+    justify-content: center;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#username-div {
+    width: 100%;
+}
+
+#dashboard-btns-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-btns {
+    cursor: pointer;
+}
