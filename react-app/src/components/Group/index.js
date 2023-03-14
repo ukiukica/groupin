@@ -19,7 +19,7 @@ const Group = ({ group }) => {
       <p className="group-name">{group.name}</p>
       </div>
     </div>
-    {showDetails ? <GroupDetails /> : null}
+    {showDetails ? <GroupDetails group={group}/> : null}
     </>
   );
 };

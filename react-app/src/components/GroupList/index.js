@@ -8,11 +8,13 @@ const GroupList = () => {
   const groups = useSelector((state) => {
     return Object.values(state.groups)
   });
-  console.log("groups", groups[0])
+  console.log("groups", groups)
   return (
     <>
       {groups.map((group) => (
+        <>
         <Group key={group.id} group={group} />
+        </>
       ))}
     </>
   );

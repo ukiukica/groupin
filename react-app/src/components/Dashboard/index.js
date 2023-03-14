@@ -22,7 +22,6 @@ function Dashboard() {
         <div>Search...</div>
         <br/>
         <GroupList />
-        <GroupDetails />
       </div>
     </div>
   );
