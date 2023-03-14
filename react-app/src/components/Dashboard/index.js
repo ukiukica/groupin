@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupList from "../GroupList";
-import GroupDetails from "../GroupDetails";
 import "./Dashboard.css";
 
 function Dashboard() {
-  const userName = useSelector((state) => state.session.user.username);
+  const user = useSelector((state) => state.session.user);
+  const groupObjs = useSelector((state) => state.groups);
+  const allGroups = Object.values(groupObjs);
+  const pinnedIds = user.pinned;
+  const pinnedGroups = [];
+  pinnedIds.forEach((id) => {
+    return pinnedGroups.push(groupObjs[id]);
+  });
+
+  const [groupType, setGroupType] = useState(allGroups);
 
   return (
     <div id="dashboard-container">
       <div id="dashboard">
         <div id="username-div">
-          <h1>Hello, {userName}!</h1>
+          <h1>Hello, {user.username}!</h1>
         </div>
         <div id="dashboard-btns-div">
-          <button className="dashboard-btns">Pinned Groups</button>
-          <button className="dashboard-btns">Suggested Groups</button>
-          <button className="dashboard-btns">Browse All</button>
+          <button
+            className="dashboard-btns"
+            onClick={() => setGroupType(pinnedGroups)}
+          >
+            Pinned Groups
+          </button>
+          {/* <button className="dashboard-btns">Suggested Groups</button> */}
+          <button
+            className="dashboard-btns"
+            onClick={() => setGroupType(allGroups)}
+          >
+            Browse All
+          </button>
         </div>
-        <br/>
+        <br />
         <div>Search...</div>
-        <br/>
-        <GroupList />
-        <GroupDetails />
+        <br />
+        <GroupList groupType={groupType} />
       </div>
     </div>
   );

@@ -3,16 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import Group from "../Group";
 import "./GroupList.css";
 
-const GroupList = () => {
-
-  const groups = useSelector((state) => {
-    return Object.values(state.groups)
-  });
-  console.log("groups", groups[0])
+const GroupList = ({ groupType }) => {
   return (
     <>
-      {groups.map((group) => (
-        <Group key={group.id} group={group} />
+      {groupType.map((group) => (
+        <Group key={group?.id} group={group} />
       ))}
     </>
   );
