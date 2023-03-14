@@ -4,6 +4,7 @@ import "./GroupDetails.css";
 const GroupDetails = ({ group }) => {
   return (
     <>
+      <h1>Details</h1>
       {/* <img className="list-img" src={group.img} alt="img" />
       <h1>{group.name}</h1>
       <p>{group.details}</p>
