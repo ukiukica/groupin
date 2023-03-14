@@ -11,7 +11,7 @@ function Dashboard() {
     <div id="dashboard-container">
       <div id="dashboard">
         <div id="username-div">
-          <h1>Hello, {userName}!</h1>
+          <h1>Hey, {userName}!</h1>
         </div>
         <div id="dashboard-btns-div">
           <button className="dashboard-btns">Pinned Groups</button>
