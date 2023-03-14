@@ -4,16 +4,15 @@ import Group from "../Group";
 import "./GroupList.css";
 
 const GroupList = () => {
-
   const groups = useSelector((state) => {
-    return Object.values(state.groups)
+    return Object.values(state.groups);
   });
-  console.log("groups", groups)
+
   return (
     <>
       {groups.map((group) => (
         <>
-        <Group key={group.id} group={group} />
+          <Group key={group.id} group={group} />
         </>
       ))}
     </>
