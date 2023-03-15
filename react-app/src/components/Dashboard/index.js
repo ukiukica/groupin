@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import GroupList from "../GroupList";
 import Search from "../Search";
 import "./Dashboard.css";
@@ -17,8 +17,6 @@ function Dashboard() {
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);
   const [showSearched, setShowSearched] = useState(false);
-
-  console.log("searchedGroups", searchedGroups);
 
   return (
     <div id="dashboard-container">
@@ -48,10 +46,7 @@ function Dashboard() {
           groupType={groupType}
         />
         <br />
-        {/* <GroupList groupType={searchedGroups} /> */}
-        <GroupList
-          groupType={showSearched ? searchedGroups : groupType}
-        />
+        <GroupList groupType={showSearched ? searchedGroups : groupType} />
       </div>
     </div>
   );
