@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import "./Search.css";
 
-function Search({ setSearchedGroups, groupType }) {
+function Search({ setSearchedGroups, setShowSearched, groupType }) {
   const [query, setQuery] = useState("");
 
   console.log("query", query)
@@ -15,8 +15,9 @@ function Search({ setSearchedGroups, groupType }) {
     })
     :
     [];
-    console.log("searched", searched)
+
     setSearchedGroups(searched);
+    query ? setShowSearched(true) : setShowSearched(false);
   }, [query])
 
 
