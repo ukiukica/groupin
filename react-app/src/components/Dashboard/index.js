@@ -16,6 +16,8 @@ function Dashboard() {
 
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);
+  // console.log("groupType", groupType)
+  console.log("searchedGroups", searchedGroups);
 
   return (
     <div id="dashboard-container">
@@ -41,8 +43,8 @@ function Dashboard() {
         <br />
         <Search setSearchedGroups={setSearchedGroups} groupType={groupType}/>
         <br />
-        <GroupList groupType={searchedGroups} />
-        {/* <GroupList groupType={groupType} /> */}
+        {/* <GroupList groupType={searchedGroups} /> */}
+        <GroupList groupType={searchedGroups.length ? searchedGroups : groupType} />
       </div>
     </div>
   );

@@ -5,16 +5,21 @@ import "./Search.css";
 function Search({ setSearchedGroups, groupType }) {
   const [query, setQuery] = useState("");
 
+  console.log("query", query)
+
   useEffect(() => {
-    const searched = groupType.filter((group) => {
+    const searched = query ? groupType.filter((group) => {
       if (group?.name?.toLowerCase()?.includes(query?.toLowerCase())) {
         return group;
       }
-    });
+    })
+    :
+    [];
+    console.log("searched", searched)
     setSearchedGroups(searched);
   }, [query])
 
-  
+
   return (
     <>
       <div className="search-container">
