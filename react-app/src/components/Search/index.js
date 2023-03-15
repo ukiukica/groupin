@@ -18,7 +18,7 @@ function Search({ setSearchedGroups, setShowSearched, groupType }) {
 
     setSearchedGroups(searched);
     query ? setShowSearched(true) : setShowSearched(false);
-  }, [query])
+  }, [query, groupType])
 
 
   return (
