@@ -5,7 +5,7 @@ const Pin = ({ group }) => {
   const sessionUserId = useSelector((state) => state.session.user.id);
   const users = useSelector((state) => state.users)
   const user = users[sessionUserId];
-  // console.log("current user", user)
+
   const pinnedSet = new Set(user.pinned);
 
   const [isPinned, setIsPinned] = useState(Boolean(pinnedSet.has(group.id)));
