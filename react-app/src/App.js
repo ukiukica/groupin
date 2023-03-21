@@ -10,6 +10,7 @@ import User from './components/User/index';
 import Splash from './components/Splash'
 import { authenticate } from './store/session';
 import { viewGroups } from './store/groups';
+import { viewUsers } from './store/users';
 import Dashboard from './components/Dashboard';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
-      await dispatch(viewGroups())
+      await dispatch(viewUsers());
+      await dispatch(viewGroups());
       setLoaded(true);
     })();
   }, [dispatch]);
