@@ -6,11 +6,6 @@ import "./Dashboard.css";
 
 function Dashboard() {
 
-  const sessionUserId = useSelector((state) => state.session.user.id);
-  const users = useSelector((state) => state.users);
-  
-
-
   const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component
   const groupObjs = useSelector((state) => state.groups);
   const allGroups = Object.values(groupObjs);
