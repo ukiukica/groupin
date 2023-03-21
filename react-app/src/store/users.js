@@ -14,6 +14,10 @@ export const viewUsers = () => async (dispatch) => {
   }
 };
 
+// Create thunk to add group to pinned
+
+// Create thunk to remove group from pinned
+
 const usersReducer = (state = {}, action) => {
   switch (action.type) {
     case VIEW_USERS:
