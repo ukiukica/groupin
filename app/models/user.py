@@ -2,7 +2,7 @@ from .db import db, environment, SCHEMA, add_prefix_for_prod
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
-pinned = db.Table(
+pinned_groups = db.Table(
     'pinned',
     db.Column('group_id', db.Integer, db.ForeignKey(add_prefix_for_prod('groups.id'))),
     db.Column('user_id', db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')))
@@ -19,7 +19,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
 
-    pinned = db.relationship('Group', secondary=pinned, lazy='subquery',
+    pinned = db.relationship('Group', secondary=pinned_groups, lazy='subquery',
         backref=db.backref('users', lazy=True))
 
     @property
@@ -32,6 +32,10 @@ class User(db.Model, UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
+    
+    def pin_group_to_user(self, group):
+        self.pinned.append(group)
+        return self
 
     def to_dict(self):
         return {
