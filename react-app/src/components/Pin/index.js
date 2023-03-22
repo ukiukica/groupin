@@ -1,22 +1,29 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { pinGroup } from "../../store/users";
 
 const Pin = ({ group }) => {
+  const dispatch = useDispatch();
+
   const sessionUserId = useSelector((state) => state.session.user.id);
   const users = useSelector((state) => state.users)
   const user = users[sessionUserId];
 
   const pinnedSet = new Set(user.pinned);
 
-  const [isPinned, setIsPinned] = useState(Boolean(pinnedSet.has(group.id)));
-
   const handleClick = () => {
-    isPinned ? setIsPinned(false) : setIsPinned(true);
+    // isPinned ? setIsPinned(false) : setIsPinned(true);
+    const payload = {
+      userId: user.id,
+      groupId: group.id
+    }
+
+    dispatch(pinGroup(payload))
   }
 
   return (
     <>
-      {isPinned ? (
+      {pinnedSet.has(group.id) ? (
         <button onClick={() => handleClick()}>Unpin</button>
       ) : (
         <button onClick={() => handleClick()}>Pin</button>
