@@ -27,4 +27,5 @@ def pin_group(user_id, group_id):
     user.pin_group_to_user(group)
     db.session.commit()
 
-    return "Group was pinned"
+    users = User.query.all()
+    return {'users': [user.to_dict() for user in users]}

@@ -19,10 +19,10 @@ export const viewUsers = () => async (dispatch) => {
   export const pinGroup = (payload) => async (dispatch) => {
     const response = await fetch(
       `/api/users/${payload.userId}/pin-group/${payload.groupId}`,
-      {
-        method: "POST",
-        body: JSON.stringify(payload),
-      }
+      // {
+      //   method: "POST",
+      //   body: JSON.stringify(payload),
+      // }
     );
 
     if (response.ok) {

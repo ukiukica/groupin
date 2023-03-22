@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { pinGroup } from "../../store/users";
+import { pinGroup, viewUsers } from "../../store/users";
 
 const Pin = ({ group }) => {
   const dispatch = useDispatch();
@@ -10,6 +10,8 @@ const Pin = ({ group }) => {
   const user = users[sessionUserId];
 
   const pinnedSet = new Set(user.pinned);
+
+  
 
   const handleClick = async (e) => {
     // isPinned ? setIsPinned(false) : setIsPinned(true);
@@ -23,12 +25,16 @@ const Pin = ({ group }) => {
     await dispatch(pinGroup(payload));
   }
 
+    // useEffect(() => {
+    //   dispatch(viewUsers());
+    // }, [dispatch, users]);
+
   return (
     <>
       {pinnedSet.has(group.id) ? (
-        <button onClick={() => handleClick()}>Unpin</button>
+        <button onClick={(e) => handleClick(e)}>Unpin</button>
       ) : (
-        <button onClick={() => handleClick()}>Pin</button>
+        <button onClick={(e) => handleClick(e)}>Pin</button>
       )}
     </>
   );
