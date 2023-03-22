@@ -29,3 +29,14 @@ def pin_group(user_id, group_id):
 
     users = User.query.all()
     return {'users': [user.to_dict() for user in users]}
+
+@user_routes.route('/<int:user_id>/unpin-group/<int:group_id>')
+@login_required
+def unpin_group(user_id, group_id):
+    user = User.query.get(user_id)
+    group = Group.query.get(group_id)
+    user.unpin_group_from_user(group)
+    db.session.commit()
+
+    users = User.query.all()
+    return {'users': [user.to_dict() for user in users]}

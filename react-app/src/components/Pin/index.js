@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { pinGroup, viewUsers } from "../../store/users";
+import { pinGroup, unpinGroup, viewUsers } from "../../store/users";
 
 const Pin = ({ group }) => {
   const dispatch = useDispatch();
@@ -21,7 +21,9 @@ const Pin = ({ group }) => {
       userId: user.id,
       groupId: group.id
     }
-
+    pinnedSet.has(group.id) ?
+    await dispatch(unpinGroup(payload))
+    :
     await dispatch(pinGroup(payload));
   }
 
