@@ -11,14 +11,16 @@ const Pin = ({ group }) => {
 
   const pinnedSet = new Set(user.pinned);
 
-  const handleClick = () => {
+  const handleClick = async (e) => {
     // isPinned ? setIsPinned(false) : setIsPinned(true);
+    e.preventDefault();
+
     const payload = {
       userId: user.id,
       groupId: group.id
     }
 
-    dispatch(pinGroup(payload))
+    await dispatch(pinGroup(payload));
   }
 
   return (
