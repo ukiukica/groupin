@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import User
+from app.models import db, User, Group
 
 user_routes = Blueprint('users', __name__)
 
@@ -19,3 +19,12 @@ def user(id):
     return user.to_dict()
 
 # /<int:id1>/pin-group/<int:id2>
+@user_routes.route('/<int:user_id>/pin-group/<int:group_id>')
+@login_required
+def pin_group(user_id, group_id):
+    user = User.query.get(user_id)
+    group = Group.query.get(group_id)
+    user.pin_group_to_user(group)
+    db.session.commit()
+
+    return "Group was pinned"
