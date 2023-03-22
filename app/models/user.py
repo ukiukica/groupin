@@ -37,6 +37,10 @@ class User(db.Model, UserMixin):
         self.pinned.append(group)
         return self
 
+    def unpin_group_from_user(self, group):
+        self.pinned.remove(group)
+        return self
+
     def to_dict(self):
         return {
             'id': self.id,
