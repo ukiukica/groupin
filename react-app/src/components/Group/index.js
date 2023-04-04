@@ -9,7 +9,6 @@ const Group = ({ group }) => {
 
   return (
     <>
-      <Pin id="pin-btn" group={group} />
       <div
         id="group-container"
         onClick={() =>
@@ -22,6 +21,7 @@ const Group = ({ group }) => {
         <div className="group-name-div">
           <p className="group-name">{group?.name}</p>
         </div>
+        <Pin id="pin-btn" group={group} />
       </div>
       {showDetails ? <GroupDetails group={group} /> : null}
     </>

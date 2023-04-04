@@ -1,4 +1,9 @@
 .group-details {
     background-color: #D9D9D9;
-    ;
+    font-size: 13px;
+    padding: 6px 32px;
+}
+
+#group-link {
+    text-align: center;
 }
