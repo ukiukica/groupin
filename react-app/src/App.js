@@ -12,6 +12,7 @@ import { authenticate } from './store/session';
 import { viewGroups } from './store/groups';
 import { viewUsers } from './store/users';
 import Dashboard from './components/Dashboard';
+import "./global.css"
 
 function App() {
   const [loaded, setLoaded] = useState(false);
