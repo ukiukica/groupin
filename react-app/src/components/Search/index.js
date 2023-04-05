@@ -18,18 +18,16 @@ function Search({ setSearchedGroups, setShowSearched, groupType }) {
   }, [query, groupType]);
 
   return (
-    <>
-      <div className="search-container">
-        <div className="search-div">
+      <div id="search-container">
+        <div id="search-div">
           {/* <img id="search-img" src={search} alt="search" /> */}
           <input
             id="search"
-            placeholder="Search"
+            placeholder="Search..."
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
       </div>
-    </>
   );
 }
 

@@ -30,28 +30,28 @@ function Dashboard() {
     <div id="dashboard-container">
       <div id="dashboard">
         <div id="username-div">
-          <h1>Hello, {user.username}!</h1>
+          <h1>Hey, {user.username}!</h1>
         </div>
-      <br />
       <Search
         setSearchedGroups={setSearchedGroups}
         setShowSearched={setShowSearched}
         groupType={groupType}
       />
-      <br />
         <div id="dashboard-btns-div">
           <button
             className="dashboard-btns"
+            id="pinned-btn"
             onClick={() => setGroupType(pinnedGroups)}
           >
-            Pinned Groups
+            Pinned groups
           </button>
           {/* <button className="dashboard-btns">Suggested Groups</button> */}
           <button
             className="dashboard-btns"
+            id="browse-all-btn"
             onClick={() => setGroupType(allGroups)}
           >
-            Browse All
+            Browse all groups
           </button>
         </div>
         <GroupList groupType={showSearched ? searchedGroups : groupType} />
