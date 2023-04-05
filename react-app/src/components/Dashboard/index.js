@@ -23,7 +23,8 @@ function Dashboard() {
   const [searchedGroups, setSearchedGroups] = useState([]);
   const [showSearched, setShowSearched] = useState(false);
 
-
+  useEffect(() => {
+  }, [allGroups, pinnedGroups]);
 
   return (
     <div id="dashboard-container">
@@ -31,6 +32,13 @@ function Dashboard() {
         <div id="username-div">
           <h1>Hello, {user.username}!</h1>
         </div>
+      <br />
+      <Search
+        setSearchedGroups={setSearchedGroups}
+        setShowSearched={setShowSearched}
+        groupType={groupType}
+      />
+      <br />
         <div id="dashboard-btns-div">
           <button
             className="dashboard-btns"
@@ -46,13 +54,6 @@ function Dashboard() {
             Browse All
           </button>
         </div>
-        <br />
-        <Search
-          setSearchedGroups={setSearchedGroups}
-          setShowSearched={setShowSearched}
-          groupType={groupType}
-        />
-        <br />
         <GroupList groupType={showSearched ? searchedGroups : groupType} />
       </div>
     </div>
