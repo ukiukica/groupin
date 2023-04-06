@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
 #dashboard-container {
     display: flex;
     justify-content: center;
@@ -6,7 +10,7 @@
 #dashboard {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
 }
 
 #username-div {
@@ -15,9 +19,18 @@
 
 #dashboard-btns-div {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .dashboard-btns {
     cursor: pointer;
+    border: none;
+    background-color: #737171;
+    color: white;
+    padding: 10px 100px;
+    border-top-right-radius: 12px;
+}
+
+#pinned-btn {
+    margin-right: 2px;
 }
