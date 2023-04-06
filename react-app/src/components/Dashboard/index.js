@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import GroupList from "../GroupList";
 import Search from "../Search";
@@ -22,9 +22,6 @@ function Dashboard() {
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);
   const [showSearched, setShowSearched] = useState(false);
-
-  useEffect(() => {
-  }, [allGroups, pinnedGroups]);
 
   return (
     <div id="dashboard-container">

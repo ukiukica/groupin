@@ -6,16 +6,17 @@
 #nav-links {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 95%;
 }
 
 #nav-left {
 }
 
 #nav-right {
-    display: flex;
-    justify-content: space-between;
-    width: 220px;
+}
+
+#sign-up-btn {
+    margin-left: 30px;
 }
 
 #nav-home-link {
