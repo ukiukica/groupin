@@ -10,14 +10,18 @@ function Dashboard() {
   // const users = useSelector((state) => state.users);
   // const user = users[sessionUserId];
 
+  console.log("BEFORE SESSION USER")
   const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component ^^
+  console.log("AFTER SESSION USER")
   const groupObjs = useSelector((state) => state.groups);
   const allGroups = Object.values(groupObjs);
   const pinnedIds = user.pinned;
   const pinnedGroups = [];
-  pinnedIds.forEach((id) => {
+  console.log("BEFORE PINNED GROUPS");
+  pinnedIds?.forEach((id) => {
     return pinnedGroups.push(groupObjs[id]);
   });
+  console.log("AFTER PINNED GROUPS");
 
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);

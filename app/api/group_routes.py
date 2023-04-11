@@ -5,7 +5,7 @@ from app.models import Group
 group_routes = Blueprint('groups', __name__)
 
 @group_routes.route('/')
-@login_required
+# @login_required
 def groups():
     print("inside group route")
     groups = Group.query.all()
