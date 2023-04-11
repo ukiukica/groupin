@@ -6,7 +6,7 @@ const view = (groups) => ({
 });
 
 export const viewGroups = () => async (dispatch) => {
-  const res = await fetch("/api/groups/");
+  const res = await fetch("/api/groups");
 
   if (res.ok) {
     const groups = await res.json();
