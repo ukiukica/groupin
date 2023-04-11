@@ -3,7 +3,7 @@
     align-items: center;
     background-color: #8C8C8C;
     margin-top: 2px;
-    padding: 6px 32px;
+    padding: 10px;
 }
 
 .group-img {
@@ -16,8 +16,8 @@
 .group-img-div {
     /* z-index: 0; */
     /* position: absolute; */
-    width: 475px;
-    height: 200px;
+    width: 380px;
+    height: 120px;
     transition: opacity 0.1s;
     /* transition: visibility 0.2s; */
     /* background-color: rgb(180, 180, 180); */
@@ -30,5 +30,5 @@
 }
 
 .group-name {
-    font-size: 20px;
+    font-size: 1em;
 }
