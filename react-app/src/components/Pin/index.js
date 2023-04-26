@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { pinGroup, unpinGroup, viewUsers } from "../../store/users";
+import "./Pin.css"
 
 const Pin = ({ group }) => {
   const dispatch = useDispatch();
 
   const sessionUserId = useSelector((state) => state.session.user.id);
-  const users = useSelector((state) => state.users)
+  const users = useSelector((state) => state.users);
   const user = users[sessionUserId];
 
   const pinnedSet = new Set(user.pinned);
-
-  
 
   const handleClick = async (e) => {
     // isPinned ? setIsPinned(false) : setIsPinned(true);
@@ -19,24 +18,27 @@ const Pin = ({ group }) => {
 
     const payload = {
       userId: user.id,
-      groupId: group.id
-    }
-    pinnedSet.has(group.id) ?
-    await dispatch(unpinGroup(payload))
-    :
-    await dispatch(pinGroup(payload));
-  }
+      groupId: group.id,
+    };
+    pinnedSet.has(group.id)
+      ? await dispatch(unpinGroup(payload))
+      : await dispatch(pinGroup(payload));
+  };
 
-    // useEffect(() => {
-    //   dispatch(viewUsers());
-    // }, [dispatch, users]);
+  // useEffect(() => {
+  //   dispatch(viewUsers());
+  // }, [dispatch, users]);
 
   return (
     <>
       {pinnedSet.has(group.id) ? (
-        <button onClick={(e) => handleClick(e)}>Unpin</button>
+        <button className="pin-btn" onClick={(e) => handleClick(e)}>
+          <i class="fa-solid fa-thumbtack fa-rotate-90"></i>
+        </button>
       ) : (
-        <button onClick={(e) => handleClick(e)}>Pin</button>
+        <button className="pin-btn" onClick={(e) => handleClick(e)}>
+          <i class="fa-solid fa-thumbtack"></i>
+        </button>
       )}
     </>
   );
