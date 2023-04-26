@@ -33,4 +33,9 @@ body::-webkit-scrollbar {
 
 #pinned-btn {
     margin-right: 2px;
+    background-color: #ED6A5A;
+}
+
+#browse-all-btn {
+    background-color: #188fa7;
 }
