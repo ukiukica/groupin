@@ -15,6 +15,7 @@ const Pin = ({ group }) => {
   const handleClick = async (e) => {
     // isPinned ? setIsPinned(false) : setIsPinned(true);
     e.preventDefault();
+    e.stopPropagation();
 
     const payload = {
       userId: user.id,
