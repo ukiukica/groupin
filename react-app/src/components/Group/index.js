@@ -6,7 +6,7 @@ import "./Group.css";
 
 const Group = ({ group }) => {
   const [showDetails, setShowDetails] = useState(false);
-
+  console.log("showDetails", showDetails);
   return (
     <>
       <div
