@@ -32,7 +32,7 @@ const Pin = ({ group }) => {
 
   return (
     <>
-      {pinnedSet.has(group.id) ? (
+      {!pinnedSet.has(group.id) ? (
         <button className="pin-btn" onClick={(e) => handleClick(e)}>
           <i class="fa-regular fa-circle-dot"></i>
         </button>

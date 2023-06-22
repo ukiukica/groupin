@@ -6,12 +6,12 @@ import "./Dashboard.css";
 
 function Dashboard() {
 
-  // const sessionUserId = useSelector((state) => state.session.user.id);
-  // const users = useSelector((state) => state.users);
-  // const user = users[sessionUserId];
+  const sessionUserId = useSelector((state) => state.session.user.id);
+  const users = useSelector((state) => state.users);
+  const user = users[sessionUserId];
 
   console.log("BEFORE SESSION USER")
-  const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component ^^
+  // const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component ^^
   console.log("AFTER SESSION USER")
   const groupObjs = useSelector((state) => state.groups);
   const allGroups = Object.values(groupObjs);
@@ -22,6 +22,7 @@ function Dashboard() {
     return pinnedGroups.push(groupObjs[id]);
   });
   console.log("AFTER PINNED GROUPS");
+  console.log('pinnedGroups', pinnedGroups)
 
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);
