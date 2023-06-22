@@ -9,7 +9,7 @@ const GroupDetails = ({ group }) => {
       <p>{group?.details}</p>
       <div id="group-link">
         <a href={group?.link} target="_blank" rel="noopener noreferrer">
-          Take me to the group
+          Take me to the group!
         </a>
       </div>
     </div>
