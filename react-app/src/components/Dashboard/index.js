@@ -52,17 +52,17 @@ function Dashboard() {
         <div id="dashboard-btns-div">
           <button
             // className="dashboard-btns"
-            className={displayPinned ? "selected-btns" : "dashboard-btns"}
+            className={displayPinned ? "selected-tab" : "unselected-tab"}
             id="pinned-btn"
             // onClick={() => setGroupType(pinnedGroups)}
             onClick={handleDisplayPinned}
           >
             Pinned groups
           </button>
-          {/* <button className="dashboard-btns">Suggested Groups</button> */}
+          {/* <button className="dashboard-tab">Suggested Groups</button> */}
           <button
-            // className="dashboard-btns"
-            className={!displayPinned ? "selected-btns" : "dashboard-btns"}
+            // className="dashboard-tab"
+            className={!displayPinned ? "selected-tab" : "unselected-tab"}
             id="browse-all-btn"
             onClick={handleDisplayAll}
           >

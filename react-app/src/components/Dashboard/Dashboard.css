@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
-.dashboard-btns {
+.unselected-tab {
     cursor: pointer;
     border: none;
     background-color: #737171;
@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
     border-top-right-radius: 12px;
 }
 
-.selected-btns {
+.selected-tab {
     cursor: pointer;
     border: none;
     background-color: #737171;
