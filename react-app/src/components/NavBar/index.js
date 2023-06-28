@@ -8,7 +8,7 @@ const NavBar = () => {
   const sessionUser = useSelector((state) => state.session.user);
 
   return (
-    <nav id="nav-links-div">
+    <nav>
       <div id="nav-links">
         <div id="nav-left">
           <NavLink
