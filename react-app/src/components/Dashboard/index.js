@@ -49,11 +49,11 @@ function Dashboard() {
           setShowSearched={setShowSearched}
           groupType={groupType}
         />
-        <div id="dashboard-btns-div">
+        <div id="dashboard-tabs-div">
           <button
             // className="dashboard-btns"
             className={displayPinned ? "selected-tab" : "unselected-tab"}
-            id="pinned-btn"
+            id="pinned-tab"
             // onClick={() => setGroupType(pinnedGroups)}
             onClick={handleDisplayPinned}
           >
@@ -63,7 +63,7 @@ function Dashboard() {
           <button
             // className="dashboard-tab"
             className={!displayPinned ? "selected-tab" : "unselected-tab"}
-            id="browse-all-btn"
+            id="browse-all-tab"
             onClick={handleDisplayAll}
           >
             Browse all groups

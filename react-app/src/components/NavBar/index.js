@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import LogoutButton from "../auth/LogoutButton";
+import Dropdown from "./Dropdown";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -50,7 +50,8 @@ const NavBar = () => {
             // >
             //   Dashboard
             // </NavLink>
-            <LogoutButton />
+            <Dropdown />
+            // <LogoutButton />
           )}
         </div>
       </div>

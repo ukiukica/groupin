@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
-#dashboard-btns-div {
+#dashboard-tabs-div {
     display: flex;
     justify-content: center;
 }
@@ -41,11 +41,11 @@ body::-webkit-scrollbar {
     box-shadow: 0px 0px 4px 1px #00000054;
 }
 
-#pinned-btn {
+#pinned-tab {
     margin-right: 2px;
     background-color: #ED6A5A;
 }
 
-#browse-all-btn {
+#browse-all-tab {
     background-color: #188fa7;
 }
