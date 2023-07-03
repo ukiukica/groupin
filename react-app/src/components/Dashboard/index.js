@@ -5,52 +5,66 @@ import Search from "../Search";
 import "./Dashboard.css";
 
 function Dashboard() {
-
-  // const sessionUserId = useSelector((state) => state.session.user.id);
-  // const users = useSelector((state) => state.users);
-  // const user = users[sessionUserId];
-
-  console.log("BEFORE SESSION USER")
-  const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component ^^
-  console.log("AFTER SESSION USER")
+  const sessionUserId = useSelector((state) => state.session.user.id);
+  const users = useSelector((state) => state.users);
+  const user = users[sessionUserId];
+  // console.log("BEFORE SESSION USER");
+  // const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component ^^
+  // console.log("AFTER SESSION USER");
   const groupObjs = useSelector((state) => state.groups);
   const allGroups = Object.values(groupObjs);
   const pinnedIds = user.pinned;
   const pinnedGroups = [];
-  console.log("BEFORE PINNED GROUPS");
+  // console.log("BEFORE PINNED GROUPS");
   pinnedIds?.forEach((id) => {
     return pinnedGroups.push(groupObjs[id]);
   });
-  console.log("AFTER PINNED GROUPS");
+  // console.log("AFTER PINNED GROUPS");
+  // console.log("pinnedGroups", pinnedGroups);
 
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);
   const [showSearched, setShowSearched] = useState(false);
+  const [displayPinned, setDisplayPinned] = useState(false);
 
+  const handleDisplayPinned = () => {
+    setGroupType(pinnedGroups)
+    setDisplayPinned(true);
+  }
+
+  const handleDisplayAll = () => {
+    setGroupType(allGroups)
+    setDisplayPinned(false);
+  }
+
+  // console.log('grouptype', groupType)
   return (
     <div id="dashboard-container">
       <div id="dashboard">
         <div id="username-div">
           <h1>Hey, {user.username}!</h1>
         </div>
-      <Search
-        setSearchedGroups={setSearchedGroups}
-        setShowSearched={setShowSearched}
-        groupType={groupType}
-      />
-        <div id="dashboard-btns-div">
+        <Search
+          setSearchedGroups={setSearchedGroups}
+          setShowSearched={setShowSearched}
+          groupType={groupType}
+        />
+        <div id="dashboard-tabs-div">
           <button
-            className="dashboard-btns"
-            id="pinned-btn"
-            onClick={() => setGroupType(pinnedGroups)}
+            // className="dashboard-btns"
+            className={displayPinned ? "selected-tab" : "unselected-tab"}
+            id="pinned-tab"
+            // onClick={() => setGroupType(pinnedGroups)}
+            onClick={handleDisplayPinned}
           >
             Pinned groups
           </button>
-          {/* <button className="dashboard-btns">Suggested Groups</button> */}
+          {/* <button className="dashboard-tab">Suggested Groups</button> */}
           <button
-            className="dashboard-btns"
-            id="browse-all-btn"
-            onClick={() => setGroupType(allGroups)}
+            // className="dashboard-tab"
+            className={!displayPinned ? "selected-tab" : "unselected-tab"}
+            id="browse-all-tab"
+            onClick={handleDisplayAll}
           >
             Browse all groups
           </button>

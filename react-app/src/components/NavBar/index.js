@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import LogoutButton from "../auth/LogoutButton";
+import Dropdown from "./Dropdown";
 import "./NavBar.css";
 
 const NavBar = () => {
   const sessionUser = useSelector((state) => state.session.user);
 
   return (
-    <nav id="nav-links-div">
+    <nav>
       <div id="nav-links">
         <div id="nav-left">
           <NavLink
@@ -50,7 +50,8 @@ const NavBar = () => {
             // >
             //   Dashboard
             // </NavLink>
-            <LogoutButton />
+            <Dropdown />
+            // <LogoutButton />
           )}
         </div>
       </div>

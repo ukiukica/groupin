@@ -3,4 +3,15 @@
     border: none;
     font-size: 25px;
     width: 30px;
+    cursor: pointer;
+}
+
+.fa-thumbtack:before {
+    content: "\f08d";
+    color: #1f353d;
+}
+
+.fa-circle-dot:before{
+    content: "\f192";
+    color: #71a9a1;
 }

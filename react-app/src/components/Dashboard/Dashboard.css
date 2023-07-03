@@ -17,12 +17,12 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
-#dashboard-btns-div {
+#dashboard-tabs-div {
     display: flex;
     justify-content: center;
 }
 
-.dashboard-btns {
+.unselected-tab {
     cursor: pointer;
     border: none;
     background-color: #737171;
@@ -31,11 +31,31 @@ body::-webkit-scrollbar {
     border-top-right-radius: 12px;
 }
 
-#pinned-btn {
-    margin-right: 2px;
-    background-color: #ED6A5A;
+.selected-tab {
+    cursor: pointer;
+    border: none;
+    background-color: #737171;
+    color: white;
+    padding: 10px 100px;
+    border-top-right-radius: 12px;
+    box-shadow: 0px 0px 4px 1px #9EC1A3;;
 }
 
-#browse-all-btn {
-    background-color: #188fa7;
+/* .selected-tab:hover {
+    cursor: pointer;
+    border: none;
+    background-color: #737171;
+    color: white;
+    padding: 10px 100px;
+    border-top-right-radius: 12px;
+    box-shadow: 0px 0px 4px 1px #00000054;
+} */
+
+#pinned-tab {
+    margin-right: 2px;
+    background-color: #40798C;
+}
+
+#browse-all-tab {
+    background-color: #70A9A1;
 }
