@@ -2,6 +2,7 @@
     background-color: #D9D9D9;
     font-size: 13px;
     padding: 6px 32px;
+    box-shadow: 0px 0px 4px 1px #00000054;
 }
 
 #group-link {
