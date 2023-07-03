@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     color: white;
     padding: 10px 100px;
     border-top-right-radius: 12px;
-    box-shadow: 0px 0px 4px 1px #00000054;
+    box-shadow: 0px 0px 4px 1px #9EC1A3;;
 }
 
 /* .selected-tab:hover {
@@ -53,9 +53,9 @@ body::-webkit-scrollbar {
 
 #pinned-tab {
     margin-right: 2px;
-    background-color: #ED6A5A;
+    background-color: #40798C;
 }
 
 #browse-all-tab {
-    background-color: #188fa7;
+    background-color: #70A9A1;
 }

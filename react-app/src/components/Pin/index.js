@@ -34,11 +34,11 @@ const Pin = ({ group }) => {
     <>
       {!pinnedSet.has(group.id) ? (
         <button className="pin-btn" onClick={(e) => handleClick(e)}>
-          <i class="fa-regular fa-circle-dot"></i>
+          <i className="fa-regular fa-circle-dot"></i>
         </button>
       ) : (
         <button className="pin-btn" onClick={(e) => handleClick(e)}>
-          <i class="fa-solid fa-thumbtack"></i>
+          <i className="fa-solid fa-thumbtack"></i>
         </button>
       )}
     </>

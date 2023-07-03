@@ -1,12 +1,12 @@
 #group-container {
     display: flex;
     align-items: center;
-    background-color: #fffbf1;
+    background-color: #ffffff;
     margin-top: 2px;
     padding: 6px 32px;
     border-radius: 3px;
     /* border-bottom: 1px solid #2b8697; */
-    box-shadow: 0px 0px 4px 1px #00000054;
+    box-shadow: 0px 0px 4px 1px #9EC1A3;
     cursor: pointer;
 }
 
@@ -35,4 +35,5 @@
 
 .group-name {
     font-size: 18px;
+    color: #1F363D;
 }

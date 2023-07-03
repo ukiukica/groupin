@@ -8,6 +8,10 @@
     padding: 6px 0 6px 15px;
     /* font-weight: 600; */
     margin: 20px 0 40px;
-    border: 5px #ecaf48 double;
+    border: 5px #71a9a1 double;
     border-radius: 10px;
+}
+
+#search:focus {
+    outline-color: #71a9a1;
 }
