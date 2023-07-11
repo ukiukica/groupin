@@ -18,6 +18,14 @@
 }
 
 .fa-circle-dot:before{
-    content: "\f192";
+    /* content: "\f192"; */
     color: #71a9a1;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .pin-btn {
+        font-size: 40px;
+        min-width: fit-content;
+    }
 }

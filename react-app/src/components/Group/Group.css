@@ -37,3 +37,18 @@
     font-size: 18px;
     color: #1F363D;
 }
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #group-container {
+        padding: 0;
+    }
+
+    .group-name-div {
+        padding-left: 20px;
+    }
+
+    .group-name {
+        font-size: 22px;
+    }
+}

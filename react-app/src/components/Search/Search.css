@@ -15,7 +15,7 @@
     color: #3f798c;
 }
 
-#search {
+#search-div input {
     width: -webkit-fill-available;
     padding: 6px 40px 6px;
     margin: 20px 0 40px;
@@ -27,4 +27,24 @@
 #search:focus {
     outline-color: #71a9a1;
 
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #search-div {
+        position: relative;
+        width: 100%;
+    }
+
+    #search-div i {
+        top: 41px;
+        left: 25px;
+        font-size: 25px;
+    }
+
+    #search-div input {
+        height: 45px;
+        font-size: 17px;
+        padding: 6px 40px 6px 60px;
+    }
 }
