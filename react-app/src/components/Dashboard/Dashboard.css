@@ -22,40 +22,49 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
-.unselected-tab {
+.dashboard-tabs {
     cursor: pointer;
     border: none;
-    background-color: #737171;
+    /* background-color: #737171; */
     color: white;
     padding: 10px 100px;
     border-top-right-radius: 12px;
 }
-
-.selected-tab {
-    cursor: pointer;
-    border: none;
-    background-color: #737171;
-    color: white;
-    padding: 10px 100px;
-    border-top-right-radius: 12px;
-    box-shadow: 0px 0px 4px 1px #9EC1A3;;
-}
-
-/* .selected-tab:hover {
-    cursor: pointer;
-    border: none;
-    background-color: #737171;
-    color: white;
-    padding: 10px 100px;
-    border-top-right-radius: 12px;
-    box-shadow: 0px 0px 4px 1px #00000054;
-} */
 
 #pinned-tab {
-    margin-right: 2px;
     background-color: #40798C;
 }
 
 #browse-all-tab {
     background-color: #70A9A1;
+}
+
+.selected-tab {
+    box-shadow: 0px 0px 4px 1px #9EC1A3;;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #dashboard {
+        width: 100%;
+    }
+
+    #username-div > h1 {
+        font-size: 45px;
+    }
+
+    #pinned-tab {
+        flex: 1;
+    }
+
+    #browse-all-tab {
+        background-color: #70A9A1;
+        flex: 1;
+    }
+
+    .dashboard-tabs {
+        font-size: 17px;
+        padding: 12px 0;
+    }
 }

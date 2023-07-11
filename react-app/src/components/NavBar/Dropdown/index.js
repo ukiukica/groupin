@@ -30,7 +30,7 @@ function Dropdown() {
       </button>
       {showMenu && (
         <ul id="dropdown-list">
-          <li className="dropdown-items">
+          <li className="dropdown-items first-item">
             <NavLink
               to="/"
               exact={true}

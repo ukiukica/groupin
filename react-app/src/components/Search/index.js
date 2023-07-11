@@ -23,7 +23,6 @@ function Search({ setSearchedGroups, setShowSearched, groupType }) {
           {/* <img id="search-img" src={search} alt="search" /> */}
           <i class="fa-solid fa-magnifying-glass"></i>
           <input
-            id="search"
             placeholder="Search groups..."
             onChange={(e) => setQuery(e.target.value)}
           />
