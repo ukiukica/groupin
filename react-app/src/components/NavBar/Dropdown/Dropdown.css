@@ -43,6 +43,10 @@
     border-radius: 4px;
 }
 
+.first-item {
+    border-bottom: 1px solid;
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
     #dropdown-icon {
         font-size: 30px;
@@ -52,9 +56,5 @@
     .dropdown-items {
         padding: 15px 35px 15px 20px;
         font-size: 17px;
-    }
-
-    .first-item {
-        border-bottom: solid;
     }
 }
