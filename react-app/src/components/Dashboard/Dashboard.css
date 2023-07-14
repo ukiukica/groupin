@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
 }
 
 .selected-tab:active {
-    transform: scaleY(2);
+    transform: scale(1.1);
 }
 
 /* Media Queries */
