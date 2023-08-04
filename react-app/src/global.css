@@ -6,6 +6,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+i {
+    color: #71a9a1;
+}
+
 a {
     text-decoration: none;
 }

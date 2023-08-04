@@ -41,6 +41,7 @@ function Dropdown() {
             </NavLink>
           </li>
           <li className="dropdown-items">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;
             <LogoutButton />
           </li>
         </ul>

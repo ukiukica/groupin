@@ -1,12 +1,12 @@
 #dropdown-container {
-    border: 2px solid #cfe0c2;
+    border: 2px solid #407a8c;
     border-radius: 7px;
     padding: 8px 10px;
     cursor: pointer;
 }
 
 #dropdown-container:hover {
-    border: 2px solid #407a8c;
+    border: 2px solid #cfe0c2;
 }
 
 
