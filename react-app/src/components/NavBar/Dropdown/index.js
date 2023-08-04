@@ -35,12 +35,14 @@ function Dropdown() {
               to="/"
               exact={true}
               activeClassName="active"
-              id="nav-home-link"
+              id="home-link"
             >
+              <i class="fa-solid fa-house-chimney"></i>
               Home
             </NavLink>
           </li>
           <li className="dropdown-items">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
             <LogoutButton />
           </li>
         </ul>

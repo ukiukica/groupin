@@ -62,7 +62,7 @@ function Dashboard() {
           {/* <button className="dashboard-tab">Suggested Groups</button> */}
           <button
             // className="dashboard-tab"
-            className={!displayPinned ? "dashboard-tabs selected-tab" : "dashboard-tabs"}
+            className={!displayPinned ? "dashboard-tabs  selected-tab" : "dashboard-tabs"}
             id="browse-all-tab"
             onClick={handleDisplayAll}
           >

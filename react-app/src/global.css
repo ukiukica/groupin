@@ -6,15 +6,19 @@
     -webkit-font-smoothing: antialiased;
 }
 
+i {
+    color: #71a9a1;
+}
+
 a {
     text-decoration: none;
 }
 
 body {
-    background-color: #1F363D;
+    background-color: #101216;
     margin: 20px;
-    background-image: url("./images/network.png");
+    /* background-image: url("./images/network.png");
     background-size: 500px;
-    background-position: center top; /*Positioning*/
-    background-repeat: no-repeat;
+    background-position: center top;
+    background-repeat: no-repeat; */
 }
