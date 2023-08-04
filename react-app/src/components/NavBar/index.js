@@ -15,9 +15,10 @@ const NavBar = () => {
             to="/"
             exact={true}
             activeClassName="active"
-            id="nav-home-link"
+            id="groupin-link"
           >
-            Home
+            <i class="fa-solid fa-people-group"></i>&nbsp;
+            Groupin
           </NavLink>
         </div>
         <div id="nav-right">
