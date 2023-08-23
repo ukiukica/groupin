@@ -22,7 +22,7 @@ const LogoutButton = () => {
       id="logout-btn"
       onClick={onLogout}
     >
-      Logout
+      Log out
     </NavLink>
   );
 };
