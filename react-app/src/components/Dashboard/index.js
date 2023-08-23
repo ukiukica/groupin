@@ -27,6 +27,7 @@ function Dashboard() {
   const [showSearched, setShowSearched] = useState(false);
   const [displayPinned, setDisplayPinned] = useState(false);
 
+
   const handleDisplayPinned = () => {
     setGroupType(pinnedGroups)
     setDisplayPinned(true);
