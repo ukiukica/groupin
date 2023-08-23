@@ -22,38 +22,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div id="nav-right">
-          {!sessionUser ? (
-            <>
-              <NavLink
-                to="/login"
-                exact={true}
-                activeClassName="active"
-                className="nav-right-links"
-              >
-                Login
-              </NavLink>
-              <NavLink
-                to="/sign-up"
-                exact={true}
-                activeClassName="active"
-                className="nav-right-links"
-                id="sign-up-btn"
-              >
-                Sign Up
-              </NavLink>
-            </>
-          ) : (
-            // <NavLink
-            //   to="/dashboard"
-            //   exact={true}
-            //   activeClassName="active"
-            //   className="nav-right-links"
-            // >
-            //   Dashboard
-            // </NavLink>
-            <Dropdown />
-            // <LogoutButton />
-          )}
+          <Dropdown />
         </div>
       </div>
     </nav>

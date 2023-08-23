@@ -24,8 +24,8 @@
     color: #1f353d;
 }
 
-#search:focus {
-    outline-color: #71a9a1;
+input:focus {
+    outline: none;
 
 }
 

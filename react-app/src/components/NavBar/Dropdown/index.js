@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 import LogoutButton from "../../auth/LogoutButton";
 import "./Dropdown.css";
 
 function Dropdown() {
   const [showMenu, setShowMenu] = useState(false);
+  const user = useSelector((state) => state.session.user);
 
   const openMenu = () => {
     if (showMenu) return;
@@ -30,21 +32,45 @@ function Dropdown() {
       </button>
       {showMenu && (
         <ul id="dropdown-list">
-          <li className="dropdown-items first-item">
-            <NavLink
-              to="/"
-              exact={true}
-              activeClassName="active"
-              id="home-link"
-            >
-              <i class="fa-solid fa-house-chimney"></i>
-              Home
-            </NavLink>
-          </li>
-          <li className="dropdown-items">
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <LogoutButton />
-          </li>
+          {user ? (
+            <>
+              <li className="dropdown-items first-item">
+                <NavLink
+                  to="/"
+                  exact={true}
+                  activeClassName="active"
+                  className="dropdown-links"
+                >
+                  <i class="fa-solid fa-house-chimney"></i>
+                  Home
+                </NavLink>
+              </li>
+              <li className="dropdown-items">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <LogoutButton />
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="dropdown-items first-item">
+                <NavLink to="/login" exact={true} activeClassName="active" className="dropdown-links">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Log in
+                </NavLink>
+              </li>
+              <li className="dropdown-items">
+                <NavLink
+                  to="/sign-up"
+                  exact={true}
+                  activeClassName="active"
+                  className="dropdown-links"
+                >
+                  <i class="fa-solid fa-user-plus"></i>
+                  Sign up
+                </NavLink>
+              </li>
+            </>
+          )}
         </ul>
       )}
     </div>
