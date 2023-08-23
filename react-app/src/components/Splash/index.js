@@ -6,7 +6,7 @@ import laughing from "../../images/laughing.jpg";
 const Splash = () => {
   return (
     <>
-      <h1>Welcome to Groupin 📌</h1>
+      <h1 id="splash-h1">Welcome to Groupin 📌</h1>
       <div id="splash-inner-container">
         <div>
           <h2>
@@ -34,7 +34,7 @@ const Splash = () => {
           </NavLink>
         </div>
         <div>
-          <img src={laughing} alt="laughing" />
+          <img id="laughing-img" src={laughing} alt="laughing" />
         </div>
       </div>
     </>
