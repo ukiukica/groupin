@@ -22,7 +22,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div id="nav-right">
-            <Dropdown />
+          <Dropdown />
         </div>
       </div>
     </nav>

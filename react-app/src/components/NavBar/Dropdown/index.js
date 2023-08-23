@@ -7,7 +7,6 @@ import "./Dropdown.css";
 function Dropdown() {
   const [showMenu, setShowMenu] = useState(false);
   const user = useSelector((state) => state.session.user);
-  console.log("user", user);
 
   const openMenu = () => {
     if (showMenu) return;
